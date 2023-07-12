@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int i,large1,large2;
+    int count=0;
+    printf("Length of Array : ");
+    scanf("%d",&i);
+    int a[i];
+    printf("Enter %d array Element : ",i);
+    for(int j=0;j<i;j++){
+        scanf("%d",&a[j]);}
+    large1=a[0];
+    large2=a[0];
+    for(int k=0;k<i;k++){
+        if(large1<a[k])
+            large1=a[k];}
+    for(int k=1;k<i;k++){
+        if(large1>a[k] && large2<a[k])
+            large2=a[k];}
+    printf("%d",large2);
+    return 0;}
